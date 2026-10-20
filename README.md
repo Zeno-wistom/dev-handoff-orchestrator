@@ -1,6 +1,6 @@
 # dev-handoff-orchestrator
 
-用于中大型、多阶段开发的 ChatGPT × Codex 顾问交接 Skill：在两端讨论、实现、核验、审批和继续开发时，提供一致的工作流、双层进度和上下文交接格式。
+用于中大型、多阶段开发的 ChatGPT × Codex 顾问交接 Skill。核心目标是**以最少用户操作和最短的充分上下文，准确传递当前目标、验证成果、关键决定和下一步**，减少重复解释与开发返工。
 
 ## 安装
 
@@ -23,7 +23,7 @@ git -C "$env:USERPROFILE\.codex\skills\dev-handoff-orchestrator" pull --ff-only
 - 在 ChatGPT 中讨论产品方向，复制可执行 Prompt 给 Codex。
 - Codex 开发并完成必要测试后，提供简洁的成果报告、证据和下一步。
 - 将报告交给 ChatGPT 解释和审查，需要时再由用户审批重要取舍。
-- 切换新会话或跨重要阶段时，生成包含六项当前上下文的一次复制交接 Prompt。
+- 进入相对独立的新功能时，主动建议切换会话并提供四项精简交接；复杂阻塞才使用六项详细交接。持续开发时依据可核实的约束错误判断是否需要纠正或切换，不臆测上下文剩余容量。
 - 项目有明确阶段时持续展示双层进度；缺少可靠验收数据则标为未知。
 
 [ChatGPT 项目级指令.md](ChatGPT%20项目级指令.md) 可用于希望在某个 ChatGPT Project 内统一顾问行为的项目。
@@ -32,7 +32,7 @@ git -C "$env:USERPROFILE\.codex\skills\dev-handoff-orchestrator" pull --ff-only
 
 - `SKILL.md`：角色、开发流程、进度、审批与会话管理
 - `agents/openai.yaml`：Skill 名称与入口说明
-- `references/workflow.md`：执行及会话恢复细则
+- `references/workflow.md`：阶段边界、会话健康检查及恢复细则
 - `references/templates.md`：日常汇报、完整交接与执行 Prompt
 - `ChatGPT 项目级指令.md`：ChatGPT 项目指令模板
 
