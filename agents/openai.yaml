@@ -1,4 +1,4 @@
 interface:
   display_name: "ChatGPT × Codex 协同开发与交接管理"
-  short_description: "默认手动交接；管理双层进度、关键审批与会话切换，浏览器自动咨询为关闭的实验项"
-  default_prompt: "使用 $dev-handoff-orchestrator 以手动交接模式管理当前开发项目：汇报进度、实际验证及下一步；需要换会话时生成可一次复制的完整交接 Prompt。"
+  short_description: "协助开发项目的顾问交接、双层进度、关键审批与会话恢复"
+  default_prompt: "使用 $dev-handoff-orchestrator 管理当前开发项目的进度、顾问交接和关键决定；需要时提供可一次复制的完整交接 Prompt。"

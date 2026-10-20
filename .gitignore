@@ -1,5 +1,3 @@
-# Per-project local bindings must never enter this shared Skill repository.
-.dev-handoff.local.json
 .env
 .env.*
 !.env.example
